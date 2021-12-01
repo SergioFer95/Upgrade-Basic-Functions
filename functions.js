@@ -40,9 +40,10 @@ console.log(solution);
 
 const allNumbers = [1, 2, 3, 5, 45, 37, 58];
 
-function sumAll(param) {
+var suma = (num1, num2) => num1 + num2;
 
-}
+console.log(allNumbers.reduce(suma));
+
 
 
 
