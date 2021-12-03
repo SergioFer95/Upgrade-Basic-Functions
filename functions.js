@@ -10,10 +10,10 @@ alert("Te vamos a decir cuál de los dos números es el mayor");
 function sum(numberOne , numberTwo) {
     
     if(numberOne > numberTwo){
-        console.log("El número " + numberOne + " es el mayor.");
+        console.log("Este es el resultado de la Iteración #1: El número " + numberOne + " es el mayor.");
 
     } else if(numberTwo > numberOne){
-        console.log("Este es el resultado de la Iteración #1: " + "El número " + numberTwo + " es el mayor.");
+        console.log("Este es el resultado de la Iteración #1: El número " + numberTwo + " es el mayor.");
     }
 }
 sum(num1, num2);
@@ -42,13 +42,13 @@ console.log("Este es el resultado de la Iteración #2: " + solution);
 // Iteración #3: Calcular la suma
 // Calcular una suma puede ser tan simple como iterar sobre un array y sumar cada uno de los elementos.
 // Implemente la función denominada sumNumbers que toma un array de números como argumento y devuelve la suma de todos los números de la matriz.
-
-// OPCIÓN 1: Resuelta!!!!!!!!
 const allNumbers = [1, 2, 3, 5, 45, 37, 58];
 
-// var suma = (num1, num2) => num1 + num2;
+// OPCIÓN 1: Resuelta!!!!!!!!
 
+// var suma = (num1, num2) => num1 + num2;
 // console.log("Este es el resultado de la Iteración #3: " + allNumbers.reduce(suma));
+
 
 // OPCIÓN 2:
 var all = 0;
@@ -87,6 +87,7 @@ console.log("Este es el resultado de la Iteración #4: " + resultado);
 
 // RESUELTA!!!
 const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
+
 function averageWord(param) {
     let total = 0;
   for(var i = 0; i < param.length; i++){
@@ -105,7 +106,7 @@ console.log("Este es el resultado de la Iteración #5: " + result);
 
 
 // Iteración #6: Valores únicos
-// Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso de que existan, los elimina para retornar un array sin los elementos duplicados. Puedes usar este array para probar tu función:
+// Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados. En caso de que existan, los elimina para retornar un array sin los elementos duplicados. Puedes usar este array para probar tu función:
 const duplicates = [
     'sushi',
     'pizza',
@@ -120,9 +121,27 @@ const duplicates = [
     'soda'
 ];
 
+// NO RESUELTO:
 function removeDuplicates(param) {
-    // insert code
+    
+    for(var i = 0; i < param.length; i++){
+        var sameWord = param[0];
+
+        for(var j of sameWord){
+            if(sameWord != param[j]){
+                console.log("No hay alimentos duplicados");
+    
+            }else if(sameWord === param[j]){
+                
+                console.log("Este es el alimento duplicado: ", param[j]);
+            }
+        }
+    }
 }
+
+
+var end2 = removeDuplicates(duplicates);
+console.log("Este es el resultado de la Iteración #6: " + end2);
 
 
 
@@ -142,11 +161,23 @@ const nameFinder = [
     'Marc'
 ];
 
+// NO RESUELTO:
 function finderName(param) {
-    // insert code
+    var user = prompt("Escribe un nombre: ", "nombre");
+
+    var exist = param.includes(user);
+    var where = param.lastIndex(who => who == user);
+
+    if(exist == -1){
+        console.log("El nombre que has añadido no existe");
+    }else {
+        console.log("El nombre que querías buscar es: " + user + " y sí existe.");
+    }
 }
+finderName(nameFinder);
 
-
+// var end3 = finderName(nameFinder);
+// console.log("Este es el resultado de la Iteración #7: " + end3);
 
 // Iteration #8: Contador de repeticiones
 // Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.  Puedes usar este array para probar tu función:
@@ -167,3 +198,6 @@ const counterWords = [
 function repeatCounter(param) {
     // insert code
 }
+
+var end4 = repeatCounter(counterWords);
+console.log("Este es el resultado de la Iteración #8: " + end4);
