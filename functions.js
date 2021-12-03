@@ -38,44 +38,48 @@ function findLongestWord(param) {
 let solution = findLongestWord(avengers);
 console.log("Este es el resultado de la Iteración #2: " + solution);
 
+
 // Iteración #3: Calcular la suma
 // Calcular una suma puede ser tan simple como iterar sobre un array y sumar cada uno de los elementos.
 // Implemente la función denominada sumNumbers que toma un array de números como argumento y devuelve la suma de todos los números de la matriz.
 
-// OPCIÓN 1: resuelta!!!!!!!!
+// OPCIÓN 1: Resuelta!!!!!!!!
 const allNumbers = [1, 2, 3, 5, 45, 37, 58];
 
-var suma = (num1, num2) => num1 + num2;
+// var suma = (num1, num2) => num1 + num2;
 
-console.log("Este es el resultado de la Iteración #3: " + allNumbers.reduce(suma));
+// console.log("Este es el resultado de la Iteración #3: " + allNumbers.reduce(suma));
 
+// OPCIÓN 2:
+var all = 0;
+
+function other(param) {
+    for(var i = 0; i < param.length; i++){
+        all += param[i];
+    }
+    return all;
+}
+
+var final = other(allNumbers);
+console.log("Este es el resultado de la Iteración #3: " + final);
 
 
 // Iteración #4: Calcular el promedio
 // Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:
 const allNumbers2 = [12, 21, 38, 5, 45, 37, 6];
+var suma5 = 0;
 
 function average(param) {
-    var allNumbs = 0;
     for(var i = 0; i < param.length; i++){
+        suma5 += param[i];
+        var division = suma5 / param.length;
     }
+    return division;
 }
 
 var resultado = average(allNumbers2);
 console.log("Este es el resultado de la Iteración #4: " + resultado);
 
-// function average(param) {
-//      var suma = param[0];
-
-//     for(var i = 0; i < suma; i++){
-//         if(i < param[0] || i > param[0]){
-//             var total = suma + param[i];
-//         }
-//     }
-//     return (total);
-// }
-// var result = average(allNumbers2);
-// console.log(result);
 
 
 // Iteración #5: Calcular promedio de strings
