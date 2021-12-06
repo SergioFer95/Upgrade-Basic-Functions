@@ -121,27 +121,28 @@ const duplicates = [
     'soda'
 ];
 
+
 // NO RESUELTO:
-function removeDuplicates(param) {
+// function removeDuplicates(param) {
     
-    for(var i = 0; i < param.length; i++){
-        var sameWord = param[0];
+//     for(var i = 0; i < param.length; i++){
+//         var sameWord = param[0];
 
-        for(var j of sameWord){
-            if(sameWord != param[j]){
-                console.log("No hay alimentos duplicados");
+//         for(var j of sameWord){
+//             if(sameWord != param[j]){
+//                 console.log("No hay alimentos duplicados");
     
-            }else if(sameWord === param[j]){
+//             }else if(sameWord === param[j]){
                 
-                console.log("Este es el alimento duplicado: ", param[j]);
-            }
-        }
-    }
-}
+//                 console.log("Este es el alimento duplicado: ", param[j]);
+//             }
+//         }
+//     }
+// }
 
 
-var end2 = removeDuplicates(duplicates);
-console.log("Este es el resultado de la Iteración #6: " + end2);
+// var end2 = removeDuplicates(duplicates);
+// console.log("Este es el resultado de la Iteración #6: " + end2);
 
 
 
@@ -161,20 +162,20 @@ const nameFinder = [
     'Marc'
 ];
 
-// NO RESUELTO:
-function finderName(param) {
-    var user = prompt("Escribe un nombre: ", "nombre");
+// // NO RESUELTO:
+// function finderName(param) {
+//     var user = prompt("Escribe un nombre: ", "nombre");
 
-    var exist = param.includes(user);
-    var where = param.lastIndex(who => who == user);
+//     var exist = param.includes(user);
+//     var where = param.lastIndex(who => who == user);
 
-    if(exist == -1){
-        console.log("El nombre que has añadido no existe");
-    }else {
-        console.log("El nombre que querías buscar es: " + user + " y sí existe.");
-    }
-}
-finderName(nameFinder);
+//     if(exist == -1){
+//         console.log("El nombre que has añadido no existe");
+//     }else {
+//         console.log("El nombre que querías buscar es: " + user + " y sí existe.");
+//     }
+// }
+// finderName(nameFinder);
 
 // var end3 = finderName(nameFinder);
 // console.log("Este es el resultado de la Iteración #7: " + end3);
@@ -201,3 +202,5 @@ function repeatCounter(param) {
 
 var end4 = repeatCounter(counterWords);
 console.log("Este es el resultado de la Iteración #8: " + end4);
+
+
